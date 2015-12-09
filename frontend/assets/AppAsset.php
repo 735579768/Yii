@@ -14,10 +14,10 @@ use yii\web\AssetBundle;
  * @since 2.0
  */
 class AppAsset extends AssetBundle {
-	public $basePath = '@webroot' . '/Public';
-	public $baseUrl  = '@web' . '/Public';
+	public $basePath = '@assets';
+	public $baseUrl  = '@assets';
 	public $css      = [
-		'/Public/css/site.css',
+		'css/site.css',
 	];
 	public $js = [
 	];
