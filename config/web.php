@@ -48,6 +48,21 @@ $config = [
 			],
 		],
 		'db'           => require __DIR__ . '/db.php',
+		'urlManager'   => [
+			'enablePrettyUrl' => true, // 启用 URL美化
+			//'enableStrictParsing' => true, //是否开启严格解析
+			/**在这里我们不配置，如果启用后缀,
+			 *那么你的每个请求都会默认有(并且请求时也得必须有).html的后缀
+			 */
+			//'suffix'          => '.html',
+			'showScriptName'  => false, // 禁用 index.php
+			'rules'           => [
+				//将home模块设置为默认访问的
+				'<controller:\w+>/<action:(create|update|delete)>/<id:\d+>' => 'home/<controller>/<action>',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'                    => 'home/<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'                             => 'home/<controller>/<action>',
+			],
+		],
 	],
 	'params'     => $params,
 	//定义多个 别名
