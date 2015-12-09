@@ -32,6 +32,6 @@ return [
 	],
 	'params'              => $params,
 	'aliases'             => [
-		'@assets' => '/public/admin',
+		'@assets' => '/assets/admin',
 	],
 ];
