@@ -2,16 +2,16 @@
 $params = array_merge(
 	require (SITE_ROOT . '/app/common/config/params.php'),
 	require (SITE_ROOT . '/app/common/config/params-local.php'),
-	require (SITE_ROOT . '/app/frontend/config/params.php'),
-	require (SITE_ROOT . '/app/frontend/config/params-local.php')
+	require (SITE_ROOT . '/app/' . APP_NAME . '/config/params.php'),
+	require (SITE_ROOT . '/app/' . APP_NAME . '/config/params-local.php')
 );
 
 return [
-	'id'                  => 'app-frontend',
-	'basePath'            => SITE_ROOT . '/app/frontend',
+	'id'                  => 'app-' . APP_NAME,
+	'basePath'            => SITE_ROOT . '/app/' . APP_NAME,
 	'bootstrap'           => ['log'],
-	'runtimePath'         => SITE_ROOT . '/data/runtime/frontend',
-	'controllerNamespace' => 'frontend\controllers',
+	'runtimePath'         => SITE_ROOT . '/data/runtime/' . APP_NAME,
+	'controllerNamespace' => APP_NAME . '\controllers',
 	'components'          => [
 		'user'         => [
 			'identityClass'   => 'common\models\User',
