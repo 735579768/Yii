@@ -11,6 +11,7 @@ return [
 	'basePath'            => SITE_ROOT . '/app/backend',
 	'controllerNamespace' => 'backend\controllers',
 	'bootstrap'           => ['log'],
+	'runtimePath'         => SITE_ROOT . '/data/runtime/backend',
 	'modules'             => [],
 	'components'          => [
 		'user'         => [

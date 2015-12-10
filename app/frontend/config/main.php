@@ -10,6 +10,7 @@ return [
 	'id'                  => 'app-frontend',
 	'basePath'            => SITE_ROOT . '/app/frontend',
 	'bootstrap'           => ['log'],
+	'runtimePath'         => SITE_ROOT . '/data/runtime/frontend',
 	'controllerNamespace' => 'frontend\controllers',
 	'components'          => [
 		'user'         => [
