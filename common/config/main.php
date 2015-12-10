@@ -9,7 +9,5 @@ return [
 			'class' => 'yii\caching\FileCache',
 		],
 	],
-	'aliases'        => [
-		'@static' => '/assets/static',
-	],
+
 ];

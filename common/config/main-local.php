@@ -1,7 +1,7 @@
 <?php
 return [
 	'components' => [
-		'db'     => [
+		'db'         => [
 			'class'       => 'yii\db\Connection',
 			'dsn'         => 'mysql:host=localhost;dbname=yii2advanced',
 			'username'    => 'root',
@@ -9,7 +9,7 @@ return [
 			'charset'     => 'utf8',
 			'tablePrefix' => 'kl_',
 		],
-		'mailer' => [
+		'mailer'     => [
 			'class'            => 'yii\swiftmailer\Mailer',
 			'viewPath'         => '@common/mail',
 			// send all mails to a file by default. You have to set
@@ -17,5 +17,11 @@ return [
 			// for the mailer to send real emails.
 			'useFileTransport' => true,
 		],
+		'urlManager' => [
+			// here is your normal backend url manager config
+		],
+	],
+	'aliases'    => [
+		'@static' => '/assets/static',
 	],
 ];

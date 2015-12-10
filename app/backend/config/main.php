@@ -1,16 +1,17 @@
 <?php
 $params = array_merge(
-	require (__DIR__ . '/../../common/config/params.php'),
-	require (__DIR__ . '/../../common/config/params-local.php'),
-	require (__DIR__ . '/params.php'),
-	require (__DIR__ . '/params-local.php')
+	require (SITE_ROOT . '/common/config/params.php'),
+	require (SITE_ROOT . '/common/config/params-local.php'),
+	require (APP_NAME_PATH . '/config/params.php'),
+	require (APP_NAME_PATH . '/config/params-local.php')
 );
 
 return [
-	'id'                  => 'app-frontend',
+	'id'                  => 'app-backend',
 	'basePath'            => dirname(__DIR__),
+	'controllerNamespace' => 'backend\controllers',
 	'bootstrap'           => ['log'],
-	'controllerNamespace' => 'frontend\controllers',
+	'modules'             => [],
 	'components'          => [
 		'user'         => [
 			'identityClass'   => 'common\models\User',
@@ -30,8 +31,7 @@ return [
 		],
 	],
 	'params'              => $params,
-	// ...
 	'aliases'             => [
-		'@assets' => '/assets/home',
+		'@assets' => '/assets/admin',
 	],
 ];
